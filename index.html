@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Aktivasi Premium">
+  <title>Aktivasi - ALIGHT MOTION</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/theme.js" defer></script>
+  <script src="./assets/js/nav.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="./">
+      <img src="https://hinatasoft.com/logo.png" alt="HinataSoft logo">
+      <span class="brand-copy"><strong>ALIGHT MOTION</strong><small>ACTIVATION</small></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi">
+      <a class="active" href="./">Aktivasi</a>
+    </nav>
+    <div class="header-controls">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ganti tema">
+        <svg id="theme-icon" viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M18.36 5.64l-1.42 1.42M7.06 16.94l1.42 1.42"></path><circle cx="12" cy="12" r="4"></circle></svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Buka menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="dashboard-main">
+<section class="shell activation-focus">
+  <div class="focus-heading">
+    <p class="eyebrow">AKTIVASI PREMIUM</p>
+    <h1>Verifikasi akun.</h1>
+    <p>Mulai dari email, lanjutkan dengan magic link dari inbox, lalu selesaikan verifikasi.</p>
+  </div>
+
+  <section class="activation-card" aria-label="Form aktivasi premium">
+    <div class="activation-top">
+      <div><span class="top-label">PROSES AKTIVASI</span><strong id="step-title">01 / Email</strong></div>
+      <span class="progress-copy" id="progress-copy">Langkah 1 dari 3</span>
+    </div>
+    <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <div class="activation-panel" id="p1">
+      <div class="panel-heading"><h2>Masukkan alamat email</h2><p>Magic link akan dikirim ke alamat ini. Password tidak diperlukan pada halaman ini.</p></div>
+      <div class="field"><label for="em">Alamat email</label><input id="em" type="email" inputmode="email" autocomplete="email" maxlength="320" placeholder="nama@email.com"></div>
+      <button class="button primary full" id="b1" type="button">Kirim magic link</button>
+      <div id="m1" class="message" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="activation-panel hidden" id="p2">
+      <div class="panel-heading">
+        <span class="recipient">Dikirim ke <strong id="w-em">-</strong></span>
+        <h2>Tempel magic link</h2>
+        <p>Salin link lengkap dari email lalu tempel di bawah untuk melanjutkan verifikasi.</p>
+      </div>
+      <div class="field"><label for="lk">Magic link atau oobCode</label><textarea id="lk" rows="4" maxlength="4096" autocomplete="off" spellcheck="false" placeholder="https://... atau oobCode"></textarea></div>
+      <div class="button-row"><button class="button secondary" id="b2" type="button">Kembali</button><button class="button primary" id="b3" type="button">Verifikasi akun</button></div>
+      <div id="m2" class="message" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="activation-panel hidden" id="p3">
+      <div class="result-mark" aria-hidden="true"><span></span></div>
+      <div class="panel-heading result-heading">
+        <span class="recipient">PROSES SELESAI</span>
+        <h2 id="result-title">Status aktivasi</h2>
+        <p id="result-message">Hasil verifikasi akan ditampilkan di bawah.</p>
+      </div>
+      <dl class="result-list">
+        <div><dt>Email</dt><dd id="r-em">-</dd></div>
+        <div><dt>UID</dt><dd id="r-uid">-</dd></div>
+        <div><dt>Order</dt><dd id="r-ord">-</dd></div>
+        <div><dt>Status</dt><dd id="r-status">-</dd></div>
+        <div><dt>Berlaku sampai</dt><dd id="r-valid">-</dd></div>
+      </dl>
+      <button class="button secondary full" id="b5" type="button">Aktivasi akun lain</button>
+    </div>
+  </section>
+</section>
+
+<section class="shell dashboard-support">
+  <div class="support-head">
+    <div><p class="eyebrow">RINGKASAN</p><h2>Status dan panduan.</h2></div>
+    <div class="guide-status" id="server-status"><span class="status-dot"></span><span id="server-status-text">Memeriksa server</span></div>
+  </div>
+  <div class="support-grid">
+    <div class="dashboard-stats">
+      <div><span>Total aktivasi</span><strong id="st-total">-</strong></div>
+      <div><span>Hari ini</span><strong id="st-today">-</strong></div>
+    </div>
+    <div class="process-guide">
+      <h3>Alur verifikasi</h3>
+      <ol class="guide-list">
+        <li class="active" id="guide-1"><span>01</span><div><strong>Email</strong><small>Kirim magic link ke akun.</small></div></li>
+        <li id="guide-2"><span>02</span><div><strong>Magic link</strong><small>Tempel link dari inbox.</small></div></li>
+        <li id="guide-3"><span>03</span><div><strong>Selesai</strong><small>Periksa hasil aktivasi.</small></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner"><span>ALIGHT MOTION ACTIVATION</span><div class="footer-links"><a href="https://hinatasoft.com/" target="_blank" rel="noopener noreferrer">HinataSoft</a></div></div>
+</footer>
+<script src="./assets/js/dashboard.js" defer></script>
+</body>
+</html>
